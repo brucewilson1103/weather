@@ -2,7 +2,7 @@
  * This file runs in a Node context (it's NOT transpiled by Babel), so use only
  * the ES6 features that are supported by your Node version. https://node.green/
  */
-
+const env = require('quasar-dotenv').config()  
 // Configuration for your app
 // https://quasar.dev/quasar-cli/quasar-conf-js
 
@@ -68,6 +68,7 @@ module.exports = function (/* ctx */) {
     // Full list of options: https://quasar.dev/quasar-cli/quasar-conf-js#Property%3A-build
     build: {
       vueRouterMode: 'hash', // available values: 'hash', 'history'
+      env: env,
 
       // rtl: false, // https://quasar.dev/options/rtl-support
       // preloadChunks: true,
